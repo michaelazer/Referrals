@@ -26,7 +26,11 @@ module.exports = {
         modules: [
             'node_modules',
             config.srcDir
-        ]
+        ],
+        alias: {
+            'faker/locale/en_US': path.join(config.srcDir, 'faker-shim.js'),
+            'faker': path.join(config.srcDir, 'faker-shim.js')
+        }
     },
     plugins: [
         new CircularDependencyPlugin({
@@ -54,8 +58,10 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                include: config.srcDir,
-                exclude: /node_modules/,
+                exclude: function(modulePath) {
+                    return /node_modules/.test(modulePath) &&
+                           !/node_modules\/.*react-draggable/.test(modulePath);
+                },
                 use: 'babel-loader'
             },
             // Modular Styles
@@ -90,7 +96,9 @@ module.exports = {
                     {
                         loader: 'sass-loader',
                         options: {
-                            includePaths: config.scssIncludes
+                            sassOptions: {
+                                includePaths: config.scssIncludes
+                            }
                         }
                     }
                 ],
@@ -116,7 +124,9 @@ module.exports = {
                     {
                         loader: 'sass-loader',
                         options: {
-                            includePaths: config.scssIncludes
+                            sassOptions: {
+                                includePaths: config.scssIncludes
+                            }
                         }
                     }
                 ],

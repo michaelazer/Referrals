@@ -20,16 +20,19 @@ const NavbarLogout = (props) => (
         </NavLink>
     </NavItem>
 );
-const ParticipantLogout = (props) => (
-    <NavItem { ...props }>
-        <NavLink 
-            tag={ Link } 
-            to={`${props.campaignName}/logout`}
-            >
-            <i className="fa fa-power-off"></i>
-        </NavLink>
-    </NavItem>
-);
+const ParticipantLogout = (props) => {
+    const { campaignName, ...navItemProps } = props;
+    return (
+        <NavItem { ...navItemProps }>
+            <NavLink
+                tag={ Link }
+                to={`${campaignName}/logout`}
+                >
+                <i className="fa fa-power-off"></i>
+            </NavLink>
+        </NavItem>
+    );
+};
 NavbarLogout.propTypes = {
     className: PropTypes.string,
     style: PropTypes.object

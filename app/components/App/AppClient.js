@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import AppLayout from './../../layout/default';
 import { RoutedContent } from './../../routes';
 
-const basePath = process.env.BASE_PATH || 'http://localhost:3001/';
+const basePath = process.env.BASE_PATH || '/';
 
 const AppClient = () => {
     return (

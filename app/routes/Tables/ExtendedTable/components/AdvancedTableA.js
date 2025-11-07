@@ -4,7 +4,7 @@ import paginationFactory from 'react-bootstrap-table2-paginator';
 import filterFactory, { Comparator, dateFilter } from 'react-bootstrap-table2-filter'
 import ToolkitProvider from 'react-bootstrap-table2-toolkit';
 import _ from 'lodash';
-import faker from 'faker/locale/en_US';
+import { faker } from '@faker-js/faker';
 import moment from 'moment';
 
 import {
@@ -117,9 +117,9 @@ export class AdvancedTableA extends React.Component {
                 <React.Fragment>
                     <span className="text-nowrap">{ column.text }</span>
                     <a
-                        href="javascript:;"
+                        href="#"
                         className="d-block small text-decoration-none text-nowrap"
-                        onClick={ this.handleResetFilters.bind(this) }
+                        onClick={ (e) => { e.preventDefault(); this.handleResetFilters(); } }
                     >
                         Reset Filters <i className="fa fa-times fa-fw text-danger"></i>
                     </a>

@@ -32,11 +32,16 @@ export const StarRating = (props) => {
                                 'fa-star-o': i > currentStars,
                                 [`text-${starColor}`]: i <= currentStars
                             }),
-                            onClick: () => isInterctive && onSelect(i)
+                            onClick: (e) => {
+                                if (isInterctive) {
+                                    e.preventDefault();
+                                    onSelect(i);
+                                }
+                            }
                         };
 
                         if (isInterctive) {
-                            starProps['href'] = 'javascript:;';
+                            starProps['href'] = '#';
                         }
 
                         stars.push(<StartElement { ...starProps } key={ i }></StartElement>);
