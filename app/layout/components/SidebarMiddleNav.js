@@ -1,4 +1,16 @@
 import React from 'react';
+import {
+    Home,
+    Building2,
+    Users,
+    User,
+    DollarSign,
+    CreditCard,
+    Mail,
+    FolderOpen,
+    Settings,
+    Webhook
+} from 'lucide-react';
 
 import { SidebarMenu } from './../../components';
 import {isAdmin, isParticipant} from '../../utilities/admin';
