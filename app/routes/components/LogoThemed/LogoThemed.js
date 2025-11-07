@@ -5,8 +5,10 @@ import classNames from 'classnames';
 import { ThemeConsumer } from '../../../components/Theme';
 
 const logos = {
-    'primary': require('./../../../images/logos/alpherral.svg'),
-    'emblem': require('./../../../images/logos/alpherral-emblem.svg')
+    'primary': require('./../../../images/logos/alpherral.png'),
+    'emblem': require('./../../../images/logos/alpherral-emblem.png'),
+    'primary-dark': require('./../../../images/logos/alpherral-dark.png'),
+    'emblem-dark': require('./../../../images/logos/alpherral-emblem-dark.png')
 }
 
 const getLogo = (style, color, slim) => {
