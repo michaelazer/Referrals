@@ -18,9 +18,9 @@ var config = {
     srcHtmlLayout:          path.join(root, 'app', 'index.html'),
 
     // Site Config ====================================================
-    siteTitle:              'Zeferral',
-    siteDescription:        'Zeferral to start, manage, and grow affiliate program',
-    siteCannonicalUrl:      'https://zeferral.vercel.app',
+    siteTitle:              'Alpherral',
+    siteDescription:        'Alpherral provides all the tools needed to start, manage, and grow your affiliate program',
+    siteCannonicalUrl:      'https://alpherral.vercel.app',
     siteKeywords:           'affiliate tracking',
     scssIncludes:           []
 }
