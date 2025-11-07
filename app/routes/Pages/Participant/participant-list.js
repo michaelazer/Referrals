@@ -279,8 +279,6 @@ export class ManageParticipantList extends React.Component {
                         <ImportButton />
                         <WeferralTableBase
                             rows={this.state.rows}
-                            createItemAction={() => { this.props.history.push('/participant/create') }}
-                            createItemLabel={'Create a Participant'}
                             fetchRows={this.fetchData}
                             sortColumn="created_at"
                             sortOrder="desc"

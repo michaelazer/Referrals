@@ -106,11 +106,6 @@ export class SidebarMiddleNav extends React.Component{
                             title="Settings"
                             to='/settings'
                         ></SidebarMenu.Item>
-                        <SidebarMenu.Item
-                            icon={<i className="fa fa-fw fa-bookmark-o"></i>}
-                            title="Docs"
-                            href='#'
-                        />
                     </SidebarMenu >
                 )
             }else if(this.state.participant){

@@ -282,14 +282,7 @@ export class ManageCommissionList extends React.Component {
                                             >
                                                 Export
                                            </CustomExportCSV>
-                                            <Button
-                                                size="sm"
-                                                outline
-                                                //onClick={this.handleDeleteRow.bind(this)}
-                                            >
-                                                Import
-                                            </Button>
-                                            
+
                                         </ButtonGroup>
                                         <UncontrolledButtonDropdown size="sm">
                                             <DropdownToggle caret color="secondary" outline>
