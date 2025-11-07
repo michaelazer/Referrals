@@ -43,7 +43,7 @@ const LogoThemed = ({ checkBackground, logo, className, slim, ...otherProps }) =
                 }
                 className={ classNames('d-block', className) }
                 alt="Alpherral Logo"
-                style={ slim ? { maxWidth: '40px', margin: '0 auto' } : { maxWidth: '200px' } }
+                style={ slim ? { maxWidth: '40px', maxHeight: '40px', margin: '0 auto', display: 'block' } : { maxWidth: '200px' } }
                 { ...otherProps }
             />
         )
