@@ -34,8 +34,8 @@ export const DefaultSidebar = () => (
 
         { /* START SIDEBAR: Emblem for Slim Sidebar */ }
         <Sidebar.ShowSlim>
-            <Sidebar.Section className="text-center" style={{ padding: '1rem 0' }}>
-                <Link to="/" className="d-block" style={{ lineHeight: 1 }}>
+            <Sidebar.Section className="text-center" style={{ padding: '1rem 0', minHeight: '60px', opacity: 1, transition: 'opacity 0.3s ease-in-out' }}>
+                <Link to="/" className="d-block" style={{ lineHeight: 1, opacity: 1, visibility: 'visible' }}>
                     <LogoThemed checkBackground slim />
                 </Link>
             </Sidebar.Section>

@@ -1,1 +1,15 @@
 @import '~@owczar/dashboard-style--airframe/scss/style';
+
+/* Fix emblem flashing in slim sidebar */
+.sidebar--slim {
+  .sidebar__show-slim {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+
+    img {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+  }
+}
