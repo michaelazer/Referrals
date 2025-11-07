@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {BootstrapTable} from 'react-bootstrap-table';
-import {WeferralTableSearch, WeferralSearchField} from './Weferral-Table-Search';
+import {AlpherralTableSearch, AlpherralSearchField} from './Alpherral-Table-Search';
 import {
     Button,
     ButtonGroup,
     Input
 } from '../../../components';
 
-export class WeferralTableBase extends React.Component {
+export class AlpherralTableBase extends React.Component {
 
     constructor(props) {
 
@@ -54,7 +54,7 @@ export class WeferralTableBase extends React.Component {
                 {self.props.createItemAction &&
                 <Button color="primary" {...self.props.createItemProps} type='button' size="md" onClick={() => {
                     self.props.createItemAction ? self.props.createItemAction() :
-                        console.error('You must pass a prop "createItem" to WeferralTableBase component.');
+                        console.error('You must pass a prop "createItem" to AlpherralTableBase component.');
                 }}><i className="fa fa-plus"/> {self.props.createItemLabel}
                 </Button>
                 }
@@ -126,8 +126,8 @@ export class WeferralTableBase extends React.Component {
             clearSearch: clearSearch || true,
             btnGroup: this.renderCustomButtonGroup,
             clearSearchBtn: this.renderCustomClearSearchBtn,
-            searchPanel: (props) => (<WeferralTableSearch { ...props } toggleAdvanced={this.toggleColumnFilter}/>),
-            searchField: (props) => (<WeferralSearchField { ...props }/>),
+            searchPanel: (props) => (<AlpherralTableSearch { ...props } toggleAdvanced={this.toggleColumnFilter}/>),
+            searchField: (props) => (<AlpherralSearchField { ...props }/>),
             exportCSVBtn: this.renderExportCSVButton,
             sizePerPageDropDown: this.renderSizePerPageDropDown,
             sizePerPage: 50,

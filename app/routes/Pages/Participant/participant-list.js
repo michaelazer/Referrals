@@ -18,7 +18,7 @@ import {
     Button,
     Container
 } from '../../../components';
-import WeferralTableBase from '../../components/Datatable';
+import AlpherralTableBase from '../../components/Datatable';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import { ImportButton } from './ImportButton';
 import {isAdmin} from '../../../utilities/admin';
@@ -62,7 +62,7 @@ export class ManageParticipantList extends React.Component {
 
     /**
      * Fetches Table Data
-     * Sets the state with the fetched data for use in WeferralTableBase's props.row
+     * Sets the state with the fetched data for use in AlpherralTableBase's props.row
      */
     fetchData() {
         let self = this;
@@ -277,7 +277,7 @@ export class ManageParticipantList extends React.Component {
                     <Row>
                     <Col xl={ 12 }>
                         <ImportButton />
-                        <WeferralTableBase
+                        <AlpherralTableBase
                             rows={this.state.rows}
                             fetchRows={this.fetchData}
                             sortColumn="created_at"
@@ -327,7 +327,7 @@ export class ManageParticipantList extends React.Component {
                                                searchable={false}
                                                width={100}>
                             </TableHeaderColumn>
-                        </WeferralTableBase>
+                        </AlpherralTableBase>
                     </Col>
                 </Row>
                     <ToastContainer 

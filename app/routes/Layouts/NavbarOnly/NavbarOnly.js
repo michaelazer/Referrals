@@ -32,7 +32,7 @@ class NavbarOnly extends React.Component {
         return (
             <Container>
                 <p className="mb-5 mt-3">
-                    Welcome to the <b>&quot;Weferral&quot;</b> A referral and affiliate management and tracking software&nbsp;
+                    Welcome to the <b>&quot;Alpherral&quot;</b> A referral and affiliate management and tracking software&nbsp;
                 </p>
 
                 <section className="mb-5">

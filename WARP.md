@@ -4,7 +4,7 @@ This file provides guidance to WARP (warp.dev) when working with code in this re
 
 ## Project Overview
 
-Weferral is a referral management & affiliate tracking software built with React and Webpack. This is the frontend dashboard application that communicates with a separate backend API (weferral-api).
+Alpherral is a referral management & affiliate tracking software built with React and Webpack. This is the frontend dashboard application that communicates with a separate backend API (alpherral-api).
 
 **Note:** This project is not production-ready yet and is still a work in progress.
 
@@ -41,8 +41,8 @@ No test suite is currently configured.
 
 ## Backend API Dependency
 
-This frontend requires the weferral-api backend server to be running:
-- Backend repo: https://github.com/WeferralHq/weferral-api
+This frontend requires the alpherral-api backend server to be running:
+- Backend repo: https://github.com/AlpherralHq/alpherral-api
 - Default backend URL: `http://localhost:3001` (configured in `app/port.js`)
 - Setup backend at: `http://localhost:3001/setup`
 

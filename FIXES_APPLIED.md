@@ -1,4 +1,4 @@
-# Fixes Applied to Weferral Application
+# Fixes Applied to Alpherral Application
 
 ## Summary
 All CORS errors, React warnings, and database issues have been resolved. The application is now running successfully.
@@ -65,9 +65,9 @@ Created admin user in database:
 **File:** `env/.env`
 ```
 POSTGRES_DB_HOST=localhost
-POSTGRES_DB_USER=weferral
-POSTGRES_DB_NAME=weferral_db
-POSTGRES_DB_PASSWORD=weferral123
+POSTGRES_DB_USER=alpherral
+POSTGRES_DB_NAME=alpherral_db
+POSTGRES_DB_PASSWORD=alpherral123
 POSTGRES_DB_PORT=5435
 FRONTEND_URL=http://localhost:4100
 ```

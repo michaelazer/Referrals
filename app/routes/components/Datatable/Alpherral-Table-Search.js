@@ -5,7 +5,7 @@ import {
     Input
 } from '../../../components';
 
-class WeferralTableSearch extends React.Component {
+class AlpherralTableSearch extends React.Component {
 
     constructor(props) {
 
@@ -30,7 +30,7 @@ class WeferralTableSearch extends React.Component {
     }
 }
 
-class WeferralSearchField extends React.Component {
+class AlpherralSearchField extends React.Component {
 
     constructor(props) {
 
@@ -63,4 +63,4 @@ class WeferralSearchField extends React.Component {
 
 }
 
-export {WeferralTableSearch, WeferralSearchField};
+export {AlpherralTableSearch, AlpherralSearchField};

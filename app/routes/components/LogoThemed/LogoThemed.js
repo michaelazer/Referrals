@@ -5,10 +5,14 @@ import classNames from 'classnames';
 import { ThemeConsumer } from '../../../components/Theme';
 
 const logos = {
-    'primary': require('./../../../images/logos/weferral.svg')
+    'primary': require('./../../../images/logos/alpherral.svg'),
+    'emblem': require('./../../../images/logos/alpherral-emblem.svg')
 }
 
-const getLogo = (style, color) => {
+const getLogo = (style, color, slim) => {
+    if (slim) {
+        return logos['emblem'];
+    }
     return logos[color];
 }
 
@@ -25,7 +29,7 @@ const getLogoUrlBackground = (style, color) => {
     }
 }
 
-const LogoThemed = ({ checkBackground, logo, className, ...otherProps }) => (
+const LogoThemed = ({ checkBackground, logo, className, slim, ...otherProps }) => (
     <ThemeConsumer>
     {
         ({ style, color }) => (
@@ -33,10 +37,11 @@ const LogoThemed = ({ checkBackground, logo, className, ...otherProps }) => (
                 src={
                     logo ?
                         getLogoUrl(logo) :
-                        getLogo(style, 'primary')
+                        getLogo(style, 'primary', slim)
                 }
                 className={ classNames('d-block', className) }
-                alt="Weferral Logo"
+                alt="Alpherral Logo"
+                style={ slim ? { maxWidth: '40px', margin: '0 auto' } : {} }
                 { ...otherProps }
             />
         )
@@ -46,6 +51,7 @@ const LogoThemed = ({ checkBackground, logo, className, ...otherProps }) => (
 LogoThemed.propTypes = {
     checkBackground: PropTypes.bool,
     className: PropTypes.string,
+    slim: PropTypes.bool,
 };
 
 export { LogoThemed };

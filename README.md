@@ -1,18 +1,18 @@
 
 <p align="center">
 <a href="#">
-<img width="500" heigth="500" src="https://res.cloudinary.com/spotshop/image/upload/v1614472368/weferral/weferral-dashboard_clbi9e.png">
+<img width="500" heigth="500" src="https://res.cloudinary.com/spotshop/image/upload/v1614472368/alpherral/alpherral-dashboard_clbi9e.png">
 </a>
 </p>
 
 ___
 <p align="center">
-<b>Weferral is a referral management & affiliate tracking software to grow your buiness</b>
+<b>Alpherral is a referral management & affiliate tracking software to grow your buiness</b>
 <p align="center"></p>
 </p>
 
 ## Overview
-Weferral provides all the tools needed to start, manage, and grow your affiliate program. Weferral affiliate management software is simple, powerful and easily customizable based on your needs.
+Alpherral provides all the tools needed to start, manage, and grow your affiliate program. Alpherral affiliate management software is simple, powerful and easily customizable based on your needs.
 
 * Note: It's not production ready yet, still a work in progress. So please use with caution. Thanks
 
@@ -33,20 +33,20 @@ Weferral provides all the tools needed to start, manage, and grow your affiliate
     - **Invite Customers:** Your customers can be the best affiliates. Send an invitation to your customer that asks them to join your affiliate program or import a csv list of customers & an invitation will be sent to them automatically.
 
 - **Extensibility:**
-    - **Full REST API:** Integrate Weferral with your existing website or application
-    - **Webhook:** Automate your workflow with Weferral webhooks
-    - **Plugin framework:** Develop plugins to extend the functionality of weferral (coming soon)
+    - **Full REST API:** Integrate Alpherral with your existing website or application
+    - **Webhook:** Automate your workflow with Alpherral webhooks
+    - **Plugin framework:** Develop plugins to extend the functionality of alpherral (coming soon)
 
 
 **Managed Solution** - (comming soon)
 
 ### Demo 
-- [Check out the demo](https://weferral-demo.vercel.app/)
+- [Check out the demo](https://alpherral-demo.vercel.app/)
 Email: demo@example.com
 password: demo
 
 ### Documation 
-- [Documation](https://weferralhq.github.io/weferral-docs/#/) 
+- [Documation](https://alpherralhq.github.io/alpherral-docs/#/) 
 
 
 ## Setup Guide
@@ -56,26 +56,26 @@ Get the app running locally in the following way:
 
 ```
 # Clone the Repo
-git clone https://github.com/WeferralHq/weferral.git
-cd weferral
+git clone https://github.com/AlpherralHq/alpherral.git
+cd alpherral
 npm install
 npm start
 ```
 ### Backend
 ```
-# Clone the weferral Server Repo
-git clone https://github.com/WeferralHq/weferral-api.git
-cd weferral-api
+# Clone the alpherral Server Repo
+git clone https://github.com/AlpherralHq/alpherral-api.git
+cd alpherral-api
 npm install 
 npm start
 
 then go to http://localhost:4100/setup to setup the database and admin user
 ```
-### Weferral Tracker
-Go to https://github.com/Ezehuche/tracker to learn how to use weferral javascript tracker.
+### Alpherral Tracker
+Go to https://github.com/Ezehuche/tracker to learn how to use alpherral javascript tracker.
 
-### Weferral Server & API 
-You checkout the api repo here https://github.com/WeferralHq/weferral-api
+### Alpherral Server & API 
+You checkout the api repo here https://github.com/AlpherralHq/alpherral-api
 
 ### Production
 To create a production build type `npm run build:prod`. After the process is complete you can copy the output from the `/dist/` directory. The output files are minified and ready to be used in a production environment.

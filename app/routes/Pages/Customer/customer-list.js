@@ -21,7 +21,7 @@ import {
     Col,
     AvatarAddOn
 } from '../../../components';
-import WeferralTableBase from '../../components/Datatable';
+import AlpherralTableBase from '../../components/Datatable';
 import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
 import Dropzone from 'react-dropzone';
 import Load from '../../../utilities/load';
@@ -53,7 +53,7 @@ export class ManageCustomerList extends React.Component {
 
     /**
      * Fetches Table Data
-     * Sets the state with the fetched data for use in WeferralTableBase's props.row
+     * Sets the state with the fetched data for use in AlpherralTableBase's props.row
      */
     fetchData() {
         let self = this;
@@ -168,7 +168,7 @@ export class ManageCustomerList extends React.Component {
                             </UncontrolledModal.Close>
                             </ModalFooter>
                         </UncontrolledModal>
-                        <WeferralTableBase
+                        <AlpherralTableBase
                             rows={this.state.rows}
                             createItemAction={() => { this.props.history.push.push('/participant/create') }}
                             createItemLabel={'Customer List'}
@@ -220,7 +220,7 @@ export class ManageCustomerList extends React.Component {
                                                searchable={false}
                                                width={100}>
                             </TableHeaderColumn>
-                        </WeferralTableBase>
+                        </AlpherralTableBase>
                     </Col>
                 </Row>
             )

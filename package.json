@@ -1,7 +1,7 @@
 {
-  "name": "weferral-dashboard",
+  "name": "alpherral-dashboard",
   "version": "0.1.0",
-  "description": "Weferral provides all the tools needed to start, manage, and grow your affiliate program",
+  "description": "Alpherral provides all the tools needed to start, manage, and grow your affiliate program",
   "main": "index.js",
   "overrides": {
     "faker": "npm:@faker-js/faker@^7.6.0",

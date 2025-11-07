@@ -60,7 +60,7 @@ export class ParticipantNavBar extends React.Component {
                 <Navbar expand="lg" themed>
                     <Link to="/">
                         <NavbarBrand className="mb-0" tag="div">
-                            Weferral
+                            Alpherral
                     </NavbarBrand>
                     </Link>
 

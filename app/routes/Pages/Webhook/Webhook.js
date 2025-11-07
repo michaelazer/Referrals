@@ -92,7 +92,7 @@ export class Webhook extends React.Component {
 
     render(){
         let pageName = 'Integrations';
-        let subtitle = 'Integrate apps with Weferral';
+        let subtitle = 'Integrate apps with Alpherral';
         if(this.state.loading){
             return(
                 <EmptyLayout>
@@ -109,7 +109,7 @@ export class Webhook extends React.Component {
                     <Card className="mb-3">
                         <CardBody className="d-flex">
                             <div>
-                                <p>Weferral can send webhook events that notify your application or third-party system any time an event happens.
+                                <p>Alpherral can send webhook events that notify your application or third-party system any time an event happens.
                                 Use it for events, like new customer conversion or Payout due time, that
                                 your application needs to know about.</p>
                             </div>
