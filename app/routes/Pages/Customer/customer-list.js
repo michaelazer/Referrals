@@ -4,7 +4,7 @@ import Fetcher from '../../../utilities/fetcher.js';
 import port from '../../../port';
 import DateFormat from '../../../utilities/dateformat';
 import ImportCsv from '../../../utilities/import';
-import { 
+import {
     EmptyLayout,
     Badge,
     Button,
@@ -17,6 +17,7 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
+    Container,
     Row,
     Col,
     AvatarAddOn
@@ -147,82 +148,84 @@ export class ManageCustomerList extends React.Component {
             )
         }else {
             return(
-                <Row>
-                    <Col xl={ 12 }>
-                        <Button id="modalImportCustomer" color="primary">
-                            Import Customers
-                        </Button>
-                        <UncontrolledModal target="modalImportCustomer" size="lg">
-                            <ModalHeader tag="h5">
-                                Import Customer
-                            </ModalHeader>
-                            <ModalBody>
-                                <CustomInput type="file" accept=".csv,.xlsx,.xls" id="uploadYourFile" onChange={this.handleFileUpload} name="customFile" label="Browse for a file to upload...." />
-                            </ModalBody>
-                            <ModalFooter>
-                                <UncontrolledModal.Close color="link" className="text-primary" size="lg">
-                                    Close
-                            </UncontrolledModal.Close>
-                                <UncontrolledModal.Close color="primary" size="lg">
-                                    Save
-                            </UncontrolledModal.Close>
-                            </ModalFooter>
-                        </UncontrolledModal>
-                        <AlpherralTableBase
-                            rows={this.state.rows}
-                            createItemAction={() => { this.props.history.push.push('/participant/create') }}
-                            createItemLabel={'Customer List'}
-                            fetchRows={this.fetchData}
-                            sortColumn="created_at"
-                            sortOrder="desc"
-                        >
-                            <TableHeaderColumn isKey
-                                            dataField='name'
-                                               dataSort={ true }
-                                               dataFormat={ this.nameFormatter }
-                                               width={200}>
-                                Name
-                            </TableHeaderColumn>
-                            <TableHeaderColumn dataField='email'
-                                               dataSort={ true }
-                                               dataFormat={ this.emailFormatter }
-                                               searchable={true}
-                                               width={150}>
-                                Email
-                            </TableHeaderColumn>
-                            <TableHeaderColumn dataField='participant_id'
-                                               dataSort={ true }
-                                               dataFormat={ this.idFormatter }
-                                               searchable={true}
-                                               width={200}>
-                                Referral Id
-                            </TableHeaderColumn>
-                            <TableHeaderColumn dataField='unique_id'
-                                               dataSort={ true }
-                                               dataFormat={ this.codeFormatter }
-                                               searchable={false}
-                                               filterFormatted
-                                               width={100}>
-                                Customer ID
-                            </TableHeaderColumn>
-                            <TableHeaderColumn dataField='created_at'
-                                               dataSort={ true }
-                                               dataFormat={ this.createdFormatter }
-                                               searchable={true}
-                                               filterFormatted
-                                               width={150}>
-                                Created At
-                            </TableHeaderColumn>
-                            <TableHeaderColumn dataField='Actions'
-                                               className={'action-column-header'}
-                                               columnClassName={'action-column'}
-                                               dataFormat={ this.rowActionsFormatter }
-                                               searchable={false}
-                                               width={100}>
-                            </TableHeaderColumn>
-                        </AlpherralTableBase>
-                    </Col>
-                </Row>
+                <Container>
+                    <Row>
+                        <Col xl={ 12 }>
+                            <Button id="modalImportCustomer" color="primary">
+                                Import Customers
+                            </Button>
+                            <UncontrolledModal target="modalImportCustomer" size="lg">
+                                <ModalHeader tag="h5">
+                                    Import Customer
+                                </ModalHeader>
+                                <ModalBody>
+                                    <CustomInput type="file" accept=".csv,.xlsx,.xls" id="uploadYourFile" onChange={this.handleFileUpload} name="customFile" label="Browse for a file to upload...." />
+                                </ModalBody>
+                                <ModalFooter>
+                                    <UncontrolledModal.Close color="link" className="text-primary" size="lg">
+                                        Close
+                                </UncontrolledModal.Close>
+                                    <UncontrolledModal.Close color="primary" size="lg">
+                                        Save
+                                </UncontrolledModal.Close>
+                                </ModalFooter>
+                            </UncontrolledModal>
+                            <AlpherralTableBase
+                                rows={this.state.rows}
+                                createItemAction={() => { this.props.history.push.push('/participant/create') }}
+                                createItemLabel={'Customer List'}
+                                fetchRows={this.fetchData}
+                                sortColumn="created_at"
+                                sortOrder="desc"
+                            >
+                                <TableHeaderColumn isKey
+                                                dataField='name'
+                                                   dataSort={ true }
+                                                   dataFormat={ this.nameFormatter }
+                                                   width={200}>
+                                    Name
+                                </TableHeaderColumn>
+                                <TableHeaderColumn dataField='email'
+                                                   dataSort={ true }
+                                                   dataFormat={ this.emailFormatter }
+                                                   searchable={true}
+                                                   width={150}>
+                                    Email
+                                </TableHeaderColumn>
+                                <TableHeaderColumn dataField='participant_id'
+                                                   dataSort={ true }
+                                                   dataFormat={ this.idFormatter }
+                                                   searchable={true}
+                                                   width={200}>
+                                    Referral Id
+                                </TableHeaderColumn>
+                                <TableHeaderColumn dataField='unique_id'
+                                                   dataSort={ true }
+                                                   dataFormat={ this.codeFormatter }
+                                                   searchable={false}
+                                                   filterFormatted
+                                                   width={100}>
+                                    Customer ID
+                                </TableHeaderColumn>
+                                <TableHeaderColumn dataField='created_at'
+                                                   dataSort={ true }
+                                                   dataFormat={ this.createdFormatter }
+                                                   searchable={true}
+                                                   filterFormatted
+                                                   width={150}>
+                                    Created At
+                                </TableHeaderColumn>
+                                <TableHeaderColumn dataField='Actions'
+                                                   className={'action-column-header'}
+                                                   columnClassName={'action-column'}
+                                                   dataFormat={ this.rowActionsFormatter }
+                                                   searchable={false}
+                                                   width={100}>
+                                </TableHeaderColumn>
+                            </AlpherralTableBase>
+                        </Col>
+                    </Row>
+                </Container>
             )
         }
     }
